@@ -1,4 +1,4 @@
-<header class="h-screen bg-[url(assets/images/bg-hero.png)] bg-cover bg-center">
+<header class="h-screen bg-[url(assets/images/bg-hero.png)] bg-cover bg-center" data-aos="zoom-out">
     <div class="mx-auto max-w-5xl flex flex-col gap-5 items-center text-center pt-20 md:pt-32">
         <div>
             <img src="assets/images/avatar.png" alt="Imagem de perfil do desenvolvedor">

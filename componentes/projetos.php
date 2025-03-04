@@ -5,15 +5,17 @@ $projetosPortfolio = [
         "titulo" => "Meu Portfólio",
         "ano" => 2025,
         "finalizado" => true,
-        "descricao" => "Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica",
-        "stack" => ["HTML", "CSS", "Javascript", "PHP", "Tailwindcss"]
+        "descricao" => "Projeto de Portfólio desenvolvido para mostrar meus projetos pessoais e profissionais.",
+        "stack" => ["HTML", "Tailwindcss", "Javascript", "PHP"],
+        "img" => "assets/images/portfolio.png"
     ],
     [
-        "titulo" => "Projeto teste",
+        "titulo" => "Meu Portfólio",
         "ano" => 2025,
-        "finalizado" => false,
-        "descricao" => "Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica",
-        "stack" => ["HTML", "CSS", "Javascript", "PHP", "Tailwindcss"]
+        "finalizado" => true,
+        "descricao" => "Projeto de Portfólio desenvolvido para mostrar meus projetos pessoais e profissionais.",
+        "stack" => ["HTML", "Tailwindcss", "Javascript", "PHP"],
+        "img" => "assets/images/portfolio.png"
     ],
 ];
 
@@ -29,9 +31,9 @@ $filtro = array_filter($projetosPortfolio, function($projeto){
 $cores = ["red", "sky", "yellow", "violet", "blue"];
 foreach ($filtro as $projetoportifolio): 
 ?>
-    <div class="bg-zinc-800 p-4 rounded-md flex gap-4">
-        <div class="flex items-center justify-center bg-red-100 w-1/2">
-            <img src="assets/images/avatar.png" alt="" class="rounded-md h-42">
+    <div class="bg-zinc-800 p-4 rounded-md flex flex-col gap-4 md:flex-row">
+        <div class="flex items-center justify-center md:w-1/2">
+            <img src="<?= $projetoportifolio["img"]; ?>" alt="" class="rounded-md">
         </div>
         <div class="flex flex-col gap-4">
             <div>

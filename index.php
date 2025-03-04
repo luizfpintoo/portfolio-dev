@@ -8,7 +8,7 @@
     <title>Portfólio Dev</title>
 </head>
 
-<body class="bg-zinc-900 text-gray-300">
+<body class="bg-zinc-900 text-gray-300 pl-4 pr-4">
    <?php include("componentes/header.php"); ?>
 
     <main class="mx-auto max-w-6xl">

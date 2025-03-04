@@ -5,21 +5,30 @@ $projetosPortfolio = [
         "titulo" => "Meu Portfólio",
         "ano" => 2025,
         "finalizado" => true,
-        "descricao" => "Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica"
+        "descricao" => "Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica",
+        "stack" => ["HTML", "CSS", "Javascript", "PHP", "Tailwindcss"]
     ],
     [
         "titulo" => "Projeto teste",
         "ano" => 2025,
         "finalizado" => false,
-        "descricao" => "Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica"
+        "descricao" => "Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica",
+        "stack" => ["HTML", "CSS", "Javascript", "PHP", "Tailwindcss"]
     ],
 ];
+
+$filtro = array_filter($projetosPortfolio, function($projeto){
+    return $projeto;
+});
 
 ?>
 
 
 
-<?php foreach ($projetosPortfolio as $projetoportifolio): ?>
+<?php 
+$cores = ["red", "sky", "yellow", "violet", "blue"];
+foreach ($filtro as $projetoportifolio): 
+?>
     <div class="bg-zinc-800 p-4 rounded-md flex gap-4">
         <div class="flex items-center justify-center bg-red-100 w-1/2">
             <img src="assets/images/avatar.png" alt="" class="rounded-md h-42">
@@ -38,10 +47,9 @@ $projetosPortfolio = [
                 <?= $projetoportifolio["descricao"]; ?>
             </p>
             <div class="flex flex-wrap gap-2">
-                <span class="py-1 px-3 rounded-full bg-red-400 font-semibold mr-1 text-red-800 text-sm">HTML</span>
-                <span class="py-1 px-2 rounded-full bg-sky-400 font-semibold mr-1 text-sky-800 text-sm">CSS</span>
-                <span class="py-1 px-2 rounded-full bg-yellow-400 font-semibold mr-1 text-yellow-800 text-sm">JavaScript</span>
-                <span class="py-1 px-2 rounded-full bg-indigo-400 font-semibold mr-1 text-indigo-800 text-sm">PHP</span>
+                <?php foreach($projetoportifolio["stack"] as $key => $stack): ?>
+                <span class="py-1 px-3 rounded-full bg-<?= $cores[$key]; ?>-400 font-semibold mr-1 text-<?= $cores[$key]; ?>-800 text-sm"><?= $stack; ?></span>
+                <? endforeach; ?>
             </div>
         </div>
     </div>

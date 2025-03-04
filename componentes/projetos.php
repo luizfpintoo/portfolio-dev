@@ -9,14 +9,6 @@ $projetosPortfolio = [
         "stack" => ["HTML", "Tailwindcss", "Javascript", "PHP"],
         "img" => "assets/images/portfolio.png"
     ],
-    [
-        "titulo" => "Meu Portfólio",
-        "ano" => 2025,
-        "finalizado" => true,
-        "descricao" => "Projeto de Portfólio desenvolvido para mostrar meus projetos pessoais e profissionais.",
-        "stack" => ["HTML", "Tailwindcss", "Javascript", "PHP"],
-        "img" => "assets/images/portfolio.png"
-    ],
 ];
 
 $filtro = array_filter($projetosPortfolio, function($projeto){
